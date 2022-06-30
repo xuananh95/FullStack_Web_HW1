@@ -5,11 +5,12 @@ function Car(_make, _speed) {
         this.speed += 10;
         console.log(`Car ${this.make} speed: ${this.speed}`);
     };
-    this.brake = function () {
-        this.speed -= 5;
-        console.log(`Car ${this.make} speed: ${this.speed}`);
-    };
 }
+
+Car.prototype.brake = function () {
+    this.speed -= 5;
+    console.log(`Car ${this.make} speed: ${this.speed}`);
+};
 
 const bmw = new Car("BMW", 120);
 const mercedes = new Car("Mercedes", 95);
